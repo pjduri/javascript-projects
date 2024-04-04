@@ -5,7 +5,7 @@ function makeLine(size, char = '#') {
     }
     return hashLine
 }
-// console.log(makeLine(5, '$'))
+console.log(makeLine(5, '?'))
 
 function makeSquare(size, char = '#') {
     return makeRectangle(size, size, char)
@@ -28,7 +28,7 @@ function makeDownwardStairs(height, char = '#') {
     }
     return triangle.slice(0, -1)
 }
-// console.log(makeDownwardStairs(7, '$'))
+// console.log(makeDownwardStairs(7))
 
 function makeSpaceLine(numSpaces, numChars, char = '#') {
     let spaceLine = ''
@@ -39,9 +39,10 @@ function makeSpaceLine(numSpaces, numChars, char = '#') {
     for (let i=0; i<numSpaces; i++) {
         spaceLine += ' '
     }
-    return spaceLine
+    return spaceLine;
 }
-// console.log(makeSpaceLine(4, 7, 'O'))
+let outputLine = makeSpaceLine(3, 9)
+console.log(outputLine)
 
 function makeIsoscelesTriangle(height, char = '#') {
     let triangle = ''
@@ -50,7 +51,7 @@ function makeIsoscelesTriangle(height, char = '#') {
     }
     return triangle.slice(0, -1)
 }
-// console.log(makeIsoscelesTriangle(9, '?'))
+// console.log(makeIsoscelesTriangle(9))
 
 function makeDiamond(height, char = '#') {
     let triangle = makeIsoscelesTriangle(height, char)

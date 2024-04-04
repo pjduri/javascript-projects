@@ -19,11 +19,37 @@ function findMinValue(arr){
 6) Be sure to print the results in order to verify your code.*/
 
 //Your function here...
+function sortArray(arr) {
+  let sortedArr = [];
+
+  while (arr.length > 0) {
+    let smallest = findMinValue(arr);
+    sortedArr.push(smallest);
+    arr.splice(arr.indexOf(smallest), 1);
+  }
+  return sortedArr;
+}
 
 /* BONUS MISSION: Refactor your sorting function to use recursion below:
  */
+function recursiveSorter(arr, newArr=[]) {
+  if (arr.length === 0) {
+    return newArr;
+  }
+  newArr.push(findMinValue(arr));
+  arr.splice(arr.indexOf(findMinValue(arr)), 1);
+  return recursiveSorter(arr, newArr);
+}
 
 //Sample arrays for testing:
 let nums1 = [5, 10, 2, 42];
 let nums2 = [-2, 0, -10, -44, 5, 3, 0, 3];
 let nums3 = [200, 5, 4, 10, 8, 5, -3.3, 4.4, 0];
+
+// console.log(sortArray(nums1));
+// console.log(sortArray(nums2));
+// console.log(sortArray(nums3));
+
+console.log(recursiveSorter(nums1));
+console.log(recursiveSorter(nums2));
+console.log(recursiveSorter(nums3));
