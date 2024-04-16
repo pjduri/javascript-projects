@@ -18,7 +18,7 @@ class Book {
 
 // Define your Manual and Novel classes here:
 class Manual extends Book {
-    constructor(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded) {
+    constructor(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded = 'No') {
         super(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded)
     }
 
@@ -30,7 +30,7 @@ class Manual extends Book {
 }
 
 class Novel extends Book {
-    constructor(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded) {
+    constructor(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded = 'No') {
         super(title, author, copyrightDate, ISBN, numPages, numCheckouts, isDiscarded)
     }
 
@@ -40,6 +40,7 @@ class Novel extends Book {
         }
     }
 }
+
 // Declare the objects for exercises 2 and 3 here:
 const pridePrejudice = new Novel('Pride and Prejudice',
     'Jane Austen',
