@@ -20,10 +20,16 @@ class CrewCandidate {
     }
 
     status() {
-        if (this.average() >= 90) return 'Accepted'
-        else if(this.average() >= 80) return 'Reserve'
-        else if(this.average >= 70) return 'Probationary'
-        else return 'Rejected'
+        let avg = this.average()
+        if (avg >= 90) {
+            return 'Accepted'
+        } else if(avg >= 80) {
+            return 'Reserve'
+        } else if(avg >= 70) {
+            return 'Probationary'
+        } else {
+            return 'Rejected'
+        }
     }
 
 }
