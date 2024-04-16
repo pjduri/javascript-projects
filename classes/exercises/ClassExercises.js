@@ -1,13 +1,6 @@
 // Define your Book class here:
 class Book {
-    constructor(title,
-        author,
-        copyrightDate,
-        ISBN,
-        numPages,
-        numCheckouts,
-        isDiscarded = 'No'
-    ) {
+    constructor(title, author, copyrightDate, ISBN, numPages, numCheckouts,isDiscarded = 'No') {
         this.title = title
         this.author = author
         this.copyrightDate = copyrightDate
