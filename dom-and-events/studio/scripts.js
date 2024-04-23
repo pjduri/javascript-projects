@@ -42,7 +42,7 @@ window.addEventListener('load', () => {
         const confirmAbort = confirm('Confirm that you want to abort the mission')
         if (confirmAbort) {
             flightStatus.innerHTML = 'Mission Aborted'
-            shuttleBackground.background = 'green'
+            shuttleBackground.style.background = 'green'
             spaceShuttleHeight.innerHTML = 0
             rocket.style.bottom = '0px'
             rocket.style.left = '0px'
